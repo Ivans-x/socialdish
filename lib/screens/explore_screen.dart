@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fooderlich/api/mock_fooderlich_service.dart';
-import 'package:fooderlich/components/today_recipe_list_view.dart';
+import 'package:fooderlich/components/components.dart';
 import 'package:fooderlich/models/models.dart';
 
 class ExploreScreen extends StatelessWidget {
@@ -14,11 +14,17 @@ class ExploreScreen extends StatelessWidget {
       builder: (context, AsyncSnapshot<ExploreData> snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
           final recipes = snapshot.data?.todayRecipes ?? [];
-          return SizedBox(
-            height:
-                MediaQuery.of(context).size.height -
-                88, // Account for AppBar and padding
-            child: TodayRecipeListView(recipes: recipes),
+          return SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                TodayRecipeListView(recipes: recipes),
+                const SizedBox(height: 16),
+                FriendPostListView(
+                  friendPosts: snapshot.data?.friendPosts ?? [],
+                ),
+              ],
+            ),
           );
         } else {
           return const Center(child: CircularProgressIndicator());

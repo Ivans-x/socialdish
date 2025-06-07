@@ -14,11 +14,12 @@ class TodayRecipeListView extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Recipes of the Day',
-            style: Theme.of(context).textTheme.titleLarge,
+            'Recipes of the Day ',
+            style: Theme.of(context).textTheme.displayLarge,
           ),
           const SizedBox(height: 16),
-          Expanded(
+          SizedBox(
+            height: 400,
             child: ListView.separated(
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
