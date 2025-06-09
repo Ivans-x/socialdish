@@ -11,10 +11,11 @@ class RecipesGridView extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(left: 16, right: 16, top: 16),
       child: GridView.builder(
+        itemCount: recipes.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
         ),
-        itemBuilder: (context, index) {
+        itemBuilder: (context, int index) {
           final recipe = recipes[index];
           return RecipeThumbnail(recipe: recipe);
         },
