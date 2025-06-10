@@ -35,6 +35,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   google_fonts: ^6.2.1
+  provider: ^6.1.5
 
 dev_dependencies:
   flutter_test:
@@ -57,11 +58,13 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
+  # To add assets to your application, add an assets section, like this:
   assets:
     - assets/food_pics/
+    - assets/fooderlich_assets/
     - assets/magazine_pics/
-    - assets/sample_data/
     - assets/profile_pics/
+    - assets/sample_data/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

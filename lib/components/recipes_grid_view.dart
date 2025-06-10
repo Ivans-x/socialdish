@@ -11,6 +11,7 @@ class RecipesGridView extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(left: 16, right: 16, top: 16),
       child: GridView.builder(
+        physics: BouncingScrollPhysics(),
         itemCount: recipes.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
