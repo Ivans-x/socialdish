@@ -6,7 +6,7 @@ class EmptyGroceryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(30.00),
+      padding: const EdgeInsets.all(30.00),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

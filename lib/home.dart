@@ -13,10 +13,10 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  static List<Widget> pages = <Widget>[
-    ExploreScreen(),
-    RecipesScreen(),
-    GroceryScreen(),
+  final List<Widget> pages = <Widget>[
+    const ExploreScreen(),
+    const RecipesScreen(),
+    const GroceryScreen(),
   ];
 
   @override

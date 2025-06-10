@@ -4,8 +4,8 @@ import 'package:fooderlich/components/components.dart';
 import 'package:fooderlich/models/simple_recipe.dart';
 
 class RecipesScreen extends StatelessWidget {
-  final exploreService = MockFooderlichService();
-  RecipesScreen({super.key});
+  static final exploreService = MockFooderlichService();
+  const RecipesScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
