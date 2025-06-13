@@ -5,6 +5,7 @@ import 'package:fooderlich/models/grocery_item.dart';
 import 'package:fooderlich/models/grocery_manager.dart';
 import 'package:fooderlich/screens/grocery_item_screen.dart';
 import 'package:fooderlich/screens/empty_grocery_screen.dart';
+import 'grocery_list_screen.dart';
 
 import 'package:provider/provider.dart';
 
@@ -41,7 +42,7 @@ class GroceryScreen extends StatelessWidget {
     return Consumer<GroceryManager>(
       builder: (context, manager, child) {
         if (manager.groceryItems.isNotEmpty) {
-          return Text('Screen Data comes here');
+          return GroceryListScreen(manager: manager);
         } else {
           return const EmptyGroceryScreen();
         }
