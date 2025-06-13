@@ -15,6 +15,7 @@ class GroceryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: buildGroceryScreen(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           final manager = Provider.of<GroceryManager>(context, listen: false);
@@ -34,7 +35,6 @@ class GroceryScreen extends StatelessWidget {
         },
         child: const Icon(Icons.add),
       ),
-      body: buildGroceryScreen(),
     );
   }
 

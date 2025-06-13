@@ -26,12 +26,12 @@ class _HomeState extends State<Home> {
         return Scaffold(
           appBar: AppBar(
             title: Text(
-              'Fooderlich',
+              'Food Fuck',
               style: Theme.of(context).textTheme.titleLarge,
             ),
             centerTitle: true,
           ),
-          body: IndexedStack(index: tabManager.selectedTab, children: pages),
+          body: pages[tabManager.selectedTab],
           bottomNavigationBar: BottomNavigationBar(
             selectedItemColor:
                 Theme.of(context).textSelectionTheme.selectionColor,
